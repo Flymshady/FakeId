@@ -14,6 +14,7 @@ public class Client {
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://uinames.com")
+              //  .baseUrl("https://uinames.com/api/?ext")
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();
 

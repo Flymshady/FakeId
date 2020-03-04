@@ -1,5 +1,12 @@
 package cz.cellar.fakeid.retrofit;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.Data;
+
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public
 class FakeId {
 
     private String name;
@@ -11,7 +18,9 @@ class FakeId {
     private String email;
     private String photo;
 
-    private static class Birthday {
+    @Data
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class Birthday {
         private String dmy;
     }
 }
